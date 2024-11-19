@@ -49,7 +49,7 @@ func init() {
 func createBskyClient(ctx context.Context) (*xrpc.Client, error) {
 	client := &xrpc.Client{
 		Client: http.DefaultClient,
-		Host:   PDSUrl,
+		Host:   BskyPDSUrl,
 	}
 	session_input := atproto.ServerCreateSession_Input{
 		Identifier: BskyID,
@@ -66,7 +66,7 @@ func createBskyClient(ctx context.Context) (*xrpc.Client, error) {
 		Handle:     session.Handle,
 		Did:        session.Did,
 	}
-	log.Printf("Logged into BlueSky account %s via PDS %s", BskyID, PDSUrl)
+	log.Printf("Logged into BlueSky account %s via PDS %s", BskyID, BskyPDSUrl)
 	return client, nil
 }
 
