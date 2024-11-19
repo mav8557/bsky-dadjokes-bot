@@ -19,7 +19,7 @@ import (
 var (
 	BskyID          string
 	BskyAppPassword string
-	PDSUrl          string
+	BskyPDSUrl      string
 )
 
 type DadJokeResponse struct {
@@ -40,9 +40,9 @@ func init() {
 	if !ok {
 		log.Fatal("Missing BSKY_APP_PASSWORD")
 	}
-	PDSUrl, ok = os.LookupEnv("PDS_URL")
+	BskyPDSUrl, ok = os.LookupEnv("BSKY_PDS_URL")
 	if !ok {
-		log.Fatal("Missing PDS_URL")
+		log.Fatal("Missing BSKY_PDS_URL")
 	}
 }
 
