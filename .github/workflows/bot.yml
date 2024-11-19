@@ -6,7 +6,7 @@ name: post joke
 on:
   workflow_dispatch:
   schedule:
-    - cron: '*/6 * * * *' # '40 12 * * *'
+    - cron: '40 12 * * *'
 
 jobs:
   post:
