@@ -25,6 +25,6 @@ jobs:
     - name: post joke
       run: ./bsky-dadjokes-bot
       env:
-        BSKY_ID: "${{ env.BSKY_ID }}"
+        BSKY_ID: "${{ vars.BSKY_ID }}"
         BSKY_APP_PASSWORD: "${{ secrets.BSKY_APP_PASSWORD }}"
-        PDS_URL: "${{ env.PDS_URL }}"
+        BSKY_PDS_URL: "${{ vars.BSKY_PDS_URL }}"
