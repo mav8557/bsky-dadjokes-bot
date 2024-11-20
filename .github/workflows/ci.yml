@@ -8,8 +8,6 @@ on:
     branches: [ "stable" ]
   pull_request:
     branches: [ "stable" ]
-  schedule:
-    - cron: '40 12 * * *'
 
 jobs:
   build:
