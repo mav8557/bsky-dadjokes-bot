@@ -77,6 +77,7 @@ func getDadJoke() (Joke, error) {
 		return "", err
 	}
 	req.Header.Add("Accept", "application/json")
+	req.Header.Add("User-Agent", "bsky-dadjokes-bot (https://github.com/mav8557/bsky-dadjokes-bot)")
 	resp, err := http.DefaultClient.Do(req)
 	if err != nil {
 		return "", err
